@@ -24,9 +24,7 @@
 </head>
 
 <body>
-    <audio autoplay="autoplay">
-        <source src="./1.mp3" type="audio/mp3" />
-    </audio>
+  <audio src="./1.mp3" id="my_audio" loop="loop"></audio>
     <div id="main">
         <div id="wrap">
             <div class="images start" >
@@ -177,6 +175,8 @@
             var hold = 1;
 
             canvas.click(function (e) {
+                var x = document.getElementById("my_audio");
+                x.play();
                 var offset = canvas.offset(), x, y;
                 x = e.pageX - offset.left;
                 y = e.pageY - offset.top;
